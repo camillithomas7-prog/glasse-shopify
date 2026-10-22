@@ -395,11 +395,17 @@
     if (lastFocus) lastFocus.focus({ preventScroll: true });
   }
   $('[data-cart-open]').addEventListener('click', function (e) { e.preventDefault(); openDrawer(); });
-  $('[data-cart-close]').addEventListener('click', closeDrawer);
-  scrim.addEventListener('click', closeDrawer);
+  // On the one-time offer, closing goes back to the cart instead of leaving it
+  function dismiss() {
+    var offerView = $('[data-view="offer"]', drawer);
+    if (offerView && !offerView.hidden) { showView('cart'); return; }
+    closeDrawer();
+  }
+  $('[data-cart-close]').addEventListener('click', dismiss);
+  scrim.addEventListener('click', dismiss);
   document.addEventListener('keydown', function (e) {
     if (drawer.hidden) return;
-    if (e.key === 'Escape') closeDrawer();
+    if (e.key === 'Escape') dismiss();
     if (e.key === 'Tab') { // focus trap
       var f = $$('button:not([disabled]), a[href]', drawer).filter(function (el) { return el.offsetParent !== null; });
       if (!f.length) return;
@@ -446,7 +452,10 @@
       }, { threshold: 0.2 }).observe(finalSec);
     }
   }
-  if (stickyBtn) stickyBtn.addEventListener('click', function () { addToCart(state.bundle); });
+  if (stickyBtn) stickyBtn.addEventListener('click', function () {
+    var offers = $('#offers');
+    if (offers) offers.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+  });
 
   /* ---------- Reveal on scroll ---------- */
   var reveals = $$('.reveal');
