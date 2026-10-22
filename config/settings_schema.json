@@ -1,0 +1,33 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "glassé",
+    "theme_version": "1.0.0",
+    "theme_author": "glassé",
+    "theme_documentation_url": "https://glasse.co",
+    "theme_support_url": "https://glasse.co"
+  },
+  {
+    "name": "Products",
+    "settings": [
+      { "type": "text", "id": "main_product", "label": "Main product handle (Jelly Pads)", "default": "glasse-salmon-dna-jelly-pads", "info": "Variants in this order: 1 jar, 2 jars, 3 jars." },
+      { "type": "text", "id": "dots_product", "label": "Cart add-on handle (Spot Dots)", "default": "glasse-spot-dots" },
+      { "type": "text", "id": "offer_product", "label": "Pre-checkout offer handle (extra jar)", "default": "glasse-extra-jar-offer" }
+    ]
+  },
+  {
+    "name": "Shipping (cart display)",
+    "settings": [
+      { "type": "number", "id": "free_ship_threshold", "label": "Free shipping threshold ($)", "default": 35, "info": "Must match the free-shipping rate in Settings → Shipping." },
+      { "type": "text", "id": "shipping_fee", "label": "Standard shipping fee ($)", "default": "4.95", "info": "Shown in the cart below the threshold. Must match Settings → Shipping." }
+    ]
+  },
+  {
+    "name": "Company",
+    "settings": [
+      { "type": "text", "id": "support_email", "label": "Support email", "default": "hello@glasse.co" },
+      { "type": "text", "id": "legal_name", "label": "Legal business name", "default": "glassé Beauty, Inc." },
+      { "type": "text", "id": "legal_address", "label": "US address (responsible person)", "default": "228 Park Ave S, New York, NY 10003" }
+    ]
+  }
+]

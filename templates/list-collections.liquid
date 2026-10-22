@@ -1,0 +1,11 @@
+<div class="wrap dp-sec">
+  <div class="dp-sec__head"><h2>Collections</h2></div>
+  <div class="dp-grid">
+    {%- for collection in collections -%}
+    <a class="dp-card" href="{{ collection.url }}">
+      <div class="dp-card__media"><img src="{{ collection.featured_image | image_url: width: 700 }}" alt="{{ collection.title | escape }}" width="700" height="875" loading="lazy"></div>
+      <div class="dp-card__body"><h3 class="dp-card__title">{{ collection.title }}</h3></div>
+    </a>
+    {%- endfor -%}
+  </div>
+</div>

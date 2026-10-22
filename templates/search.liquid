@@ -1,0 +1,17 @@
+<div class="wrap dp-page">
+  <h1>Search</h1>
+  <form action="{{ routes.search_url }}" method="get" style="display:flex;gap:10px;margin-bottom:26px">
+    <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search the store" style="flex:1;padding:14px;border:1px solid var(--line);border-radius:999px">
+    <button class="dp-btn dp-btn--brand" type="submit">Search</button>
+  </form>
+  {%- if search.performed -%}
+  <div class="dp-grid">
+    {%- for item in search.results -%}
+    <a class="dp-card" href="{{ item.url }}">
+      <div class="dp-card__media"><img src="{{ item.featured_image | image_url: width: 700 }}" alt="" width="700" height="875" loading="lazy"></div>
+      <div class="dp-card__body"><h3 class="dp-card__title">{{ item.title }}</h3></div>
+    </a>
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+</div>

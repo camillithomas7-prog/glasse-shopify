@@ -1,0 +1,13 @@
+{
+  "current": {
+    "main_product": "glasse-salmon-dna-jelly-pads",
+    "dots_product": "glasse-spot-dots",
+    "offer_product": "glasse-extra-jar-offer",
+    "free_ship_threshold": 35,
+    "shipping_fee": "4.95",
+    "support_email": "hello@glasse.co",
+    "legal_name": "glassé Beauty, Inc.",
+    "legal_address": "228 Park Ave S, New York, NY 10003"
+  },
+  "presets": { "Default": {} }
+}

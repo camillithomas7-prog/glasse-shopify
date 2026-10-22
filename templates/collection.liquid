@@ -1,0 +1,18 @@
+<div class="wrap dp-sec">
+  <div class="dp-sec__head"><h2>{{ collection.title }}</h2>{% if collection.description != blank %}<p>{{ collection.description | strip_html | truncate: 180 }}</p>{% endif %}</div>
+  <div class="dp-grid">
+    {%- for product in collection.products -%}
+    <a class="dp-card" href="{{ product.url }}">
+      <div class="dp-card__media">
+        {%- if product.compare_at_price > product.price -%}<span class="dp-card__badge">-{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price }}%</span>{%- endif -%}
+        <img src="{{ product.featured_image | image_url: width: 700 }}" alt="{{ product.title | escape }}" width="700" height="875" loading="lazy">
+      </div>
+      <div class="dp-card__body">
+        <span class="dp-card__cat">{{ product.type | default: 'Skincare' }}</span>
+        <h3 class="dp-card__title">{{ product.title }}</h3>
+        <span class="dp-card__price"><span class="dp-card__now">{{ product.price | money }}</span>{%- if product.compare_at_price > product.price -%}<span class="dp-card__was">{{ product.compare_at_price | money }}</span>{%- endif -%}</span>
+      </div>
+    </a>
+    {%- endfor -%}
+  </div>
+</div>

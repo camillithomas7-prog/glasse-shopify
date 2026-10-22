@@ -1,0 +1,34 @@
+{%- liquid
+  assign nav_base = routes.root_url
+  if template.name == "index" or product.handle == settings.main_product
+    assign nav_base = ""
+  endif
+-%}
+<!-- SECTION: announcement-bar -->
+<div class="announce" data-section="announcement-bar">
+  <p>free shipping over {{ settings.free_ship_threshold | times: 100 | money_without_trailing_zeros }} <span aria-hidden="true">·</span> 30-day money-back guarantee</p>
+</div>
+
+<!-- SECTION: header -->
+<header class="site-header" data-section="header">
+  <div class="wrap header-inner">
+    <a href="{{ routes.root_url }}" class="logo" aria-label="glassé home">
+      <img src="{{ 'logo.webp' | asset_url }}" alt="glassé" width="480" height="187">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="{{ nav_base }}#ritual">how it works</a>
+      <a href="{{ nav_base }}#dose">the dose</a>
+      <a href="{{ nav_base }}#ingredients">ingredients</a>
+      <a href="{{ nav_base }}#faq">faq</a>
+    </nav>
+    <button class="cart-btn" type="button" data-cart-open aria-label="Open cart, 0 items">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 7a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span class="cart-count" data-cart-count>0</span>
+    </button>
+  </div>
+</header>
+
+
+{% schema %}
+{ "name": "glassé header", "settings": [] }
+{% endschema %}

@@ -1,0 +1,14 @@
+<div class="wrap dp-page">
+  <h1>{{ page.title | default: 'Contact' }}</h1>
+  {%- if page.content != blank -%}<div class="rte">{{ page.content }}</div>{%- endif -%}
+  <p>Questions about your order or your skin? Write us at <a href="mailto:{{ settings.support_email }}">{{ settings.support_email }}</a> or use the form. We reply within 1 business day.</p>
+  {%- form 'contact' -%}
+    {%- if form.posted_successfully? -%}<p style="color:var(--berry);font-weight:700">thanks! we'll get back to you soon.</p>{%- endif -%}
+    {{ form.errors | default_errors }}
+    <label for="c-name">Name</label><input id="c-name" type="text" name="contact[name]" autocomplete="name">
+    <label for="c-email">Email</label><input id="c-email" type="email" name="contact[email]" autocomplete="email" required>
+    <label for="c-order">Order number (optional)</label><input id="c-order" type="text" name="contact[order]">
+    <label for="c-msg">Message</label><textarea id="c-msg" name="contact[body]" rows="5" required></textarea>
+    <button class="dp-btn" type="submit">Send</button>
+  {%- endform -%}
+</div>

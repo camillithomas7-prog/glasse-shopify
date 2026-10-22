@@ -1,0 +1,29 @@
+<!-- SECTION: footer -->
+<footer class="site-footer" data-section="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <img src="{{ 'logo.webp' | asset_url }}" alt="glassé" width="160" height="62" loading="lazy" class="footer-logo">
+      <p>the salmon DNA pad, minus the drama.</p>
+      <p>Questions? <a href="mailto:{{ settings.support_email }}">{{ settings.support_email }}</a></p>
+    </div>
+    <nav aria-label="Legal">
+      <ul>
+        <li><a href="{{ shop.privacy_policy.url | default: '/policies/privacy-policy' }}">Privacy policy</a></li>
+        <li><a href="{{ shop.terms_of_service.url | default: '/policies/terms-of-service' }}">Terms of service</a></li>
+        <li><a href="{{ shop.shipping_policy.url | default: '/policies/shipping-policy' }}">Shipping policy</a></li>
+        <li><a href="{{ shop.refund_policy.url | default: '/policies/refund-policy' }}">Refund policy</a></li>
+        <li><a href="{{ routes.root_url }}pages/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer-legal">
+      <p>Cosmetic product. Results may vary. Patch test before use. Contains fish-derived ingredients.</p>
+      <p>Distributed by {{ settings.legal_name }} · {{ settings.legal_address }}</p>
+      <p>&copy; <span data-year>2026</span> glassé</p>
+    </div>
+  </div>
+</footer>
+
+
+{% schema %}
+{ "name": "glassé footer", "settings": [] }
+{% endschema %}

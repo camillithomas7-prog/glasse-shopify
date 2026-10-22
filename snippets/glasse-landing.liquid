@@ -1,0 +1,405 @@
+
+
+<!-- SECTION: main-product (gallery + buy box) -->
+<section class="product" id="top" data-section="main-product">
+  <div class="wrap product-grid">
+
+    <div class="gallery" aria-roledescription="carousel" aria-label="Product images">
+      <div class="gallery-track" data-gallery-track tabindex="0" aria-label="Product images, scroll horizontally">
+        <figure class="slide" id="slide-1">
+          <img src="{{ 'jar-800.webp' | asset_url }}" srcset="{{ 'jar-800.webp' | asset_url }} 800w, {{ 'jar.webp' | asset_url }} 1289w" sizes="(min-width: 960px) 50vw, 100vw" width="1289" height="1600" alt="glassé Salmon DNA Jelly Pads jar with chrome lid, loose jelly pads and chrome tongs on a wet pink surface" fetchpriority="high">
+          <span class="sticker sticker-a">70 jelly pads</span>
+        </figure>
+        <figure class="slide" id="slide-2">
+          <img src="{{ 'texture-800.webp' | asset_url }}" srcset="{{ 'texture-800.webp' | asset_url }} 800w, {{ 'texture.webp' | asset_url }} 1024w" sizes="(min-width: 960px) 50vw, 100vw" width="1024" height="1024" alt="Macro of a translucent salmon jelly pad lifted from the jar with chrome tongs" loading="lazy">
+          <span class="sticker sticker-b">soaked, not soggy</span>
+        </figure>
+        <figure class="slide" id="slide-3">
+          <img src="{{ 'ugc-800.webp' | asset_url }}" srcset="{{ 'ugc-800.webp' | asset_url }} 800w, {{ 'ugc.webp' | asset_url }} 893w" sizes="(min-width: 960px) 50vw, 100vw" width="893" height="1600" alt="Young woman in her bathroom wearing two salmon jelly pads on her cheeks, holding the glassé jar" loading="lazy">
+          <span class="sticker sticker-a">5-min mask mode</span>
+        </figure>
+        <figure class="slide slide-dose" id="slide-4">
+          <img src="{{ 'jar-detail-800.webp' | asset_url }}" srcset="{{ 'jar-detail-800.webp' | asset_url }} 800w, {{ 'jar-detail.webp' | asset_url }} 1559w" sizes="(min-width: 960px) 50vw, 100vw" width="1559" height="1013" alt="Close-up of the glassé jar label" loading="lazy">
+          <div class="dose-tag" aria-label="PDRN dose printed on the jar">
+            <span>PDRN dose</span>
+            <strong>1,000 ppm</strong>
+            <span>printed on every jar</span>
+          </div>
+        </figure>
+        <figure class="slide" id="slide-5">
+          <img src="{{ 'pack-2-800.webp' | asset_url }}" srcset="{{ 'pack-2-800.webp' | asset_url }} 800w, {{ 'pack-2.webp' | asset_url }} 1289w" sizes="(min-width: 960px) 50vw, 100vw" width="1289" height="1600" alt="Two glassé jars with chrome tongs and a pink headband" loading="lazy">
+          <span class="sticker sticker-b">the duo</span>
+        </figure>
+        <figure class="slide" id="slide-6">
+          <img src="{{ 'pack-3-800.webp' | asset_url }}" srcset="{{ 'pack-3-800.webp' | asset_url }} 800w, {{ 'pack-3.webp' | asset_url }} 1289w" sizes="(min-width: 960px) 50vw, 100vw" width="1289" height="1600" alt="Three glassé jars lined up with chrome tongs and a fluffy pink headband" loading="lazy">
+          <span class="sticker sticker-a">the stash</span>
+        </figure>
+      </div>
+      <div class="thumbs" role="group" aria-label="Choose image">
+        <button type="button" class="thumb is-active" data-thumb="0" aria-label="Image 1: jar packshot" aria-current="true"><img src="{{ 'jar-800.webp' | asset_url }}" alt="" width="80" height="99" loading="lazy"></button>
+        <button type="button" class="thumb" data-thumb="1" aria-label="Image 2: jelly pad texture"><img src="{{ 'texture-800.webp' | asset_url }}" alt="" width="80" height="80" loading="lazy"></button>
+        <button type="button" class="thumb" data-thumb="2" aria-label="Image 3: pads on cheeks"><img src="{{ 'ugc-800.webp' | asset_url }}" alt="" width="80" height="143" loading="lazy"></button>
+        <button type="button" class="thumb" data-thumb="3" aria-label="Image 4: PDRN dose on the jar"><img src="{{ 'jar-detail-800.webp' | asset_url }}" alt="" width="80" height="52" loading="lazy"></button>
+        <button type="button" class="thumb" data-thumb="4" aria-label="Image 5: two jars"><img src="{{ 'pack-2-800.webp' | asset_url }}" alt="" width="80" height="99" loading="lazy"></button>
+        <button type="button" class="thumb" data-thumb="5" aria-label="Image 6: three jars"><img src="{{ 'pack-3-800.webp' | asset_url }}" alt="" width="80" height="99" loading="lazy"></button>
+      </div>
+    </div>
+
+    <div class="buybox" id="buy">
+      <p class="eyebrow">glassé · salmon DNA jelly pads</p>
+      <a class="rating" href="#reviews" aria-label="Rated 4.8 out of 5 from 1,347 reviews">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 100 20" width="96" height="19"><defs><linearGradient id="stfill" gradientUnits="userSpaceOnUse" x1="0" x2="100" y1="0" y2="0"><stop offset=".96" stop-color="#FF8A70"/><stop offset=".96" stop-color="#FF8A70" stop-opacity="0"/></linearGradient></defs><g fill="url(#stfill)" stroke="#3B1220" stroke-width="1.2" stroke-linejoin="round"><path id="st" d="M10 1.8l2.5 5.3 5.8.7-4.3 4 1.1 5.7L10 14.7 4.9 17.5 6 11.8 1.7 7.8l5.8-.7z"/><use href="#st" x="20"/><use href="#st" x="40"/><use href="#st" x="60"/><use href="#st" x="80"/></g></svg>
+        </span>
+        <span class="rating-text" aria-hidden="true"><b>4.8/5</b> · 1,347 reviews</span>
+      </a>
+      <h1 class="hero-title">Glass skin.<br>No breakouts.</h1>
+      <p class="hero-sub">The salmon DNA pad, minus the drama.</p>
+
+      <ul class="benefits">
+        <li><span class="bullet" aria-hidden="true"></span><span><b>Salmon DNA (PDRN)</b> for a dewy, plumper-looking, glass-skin finish.</span></li>
+        <li><span class="bullet" aria-hidden="true"></span><span><b>Dose on the jar.</b> 1,000 ppm PDRN, printed. No guessing.</span></li>
+        <li><span class="bullet" aria-hidden="true"></span><span><b>Breakout-safe vibe.</b> Fragrance-free, formulated for acne-prone skin.</span></li>
+      </ul>
+
+      <form class="offer" data-offer-form>
+        <fieldset>
+          <legend class="offer-legend">pick your stash</legend>
+          <div class="offer-list">
+            <label class="offer-card">
+              <input type="radio" name="bundle" value="1">
+              <span class="offer-body">
+                <img src="{{ 'jar-800.webp' | asset_url }}" alt="" width="56" height="70" loading="lazy">
+                <span class="offer-info">
+                  <span class="offer-name">1 jar</span>
+                  <span class="offer-meta">70 pads · ~2 months · tongs included</span>
+                </span>
+                <span class="offer-price"><b data-price="1">$24</b><s data-compare="1" hidden></s><span class="per" data-per="1">$24/jar</span></span>
+              </span>
+            </label>
+            <label class="offer-card">
+              <input type="radio" name="bundle" value="2" checked>
+              <span class="pill-badge">most popular</span>
+              <span class="offer-body">
+                <img src="{{ 'pack-2-800.webp' | asset_url }}" alt="" width="56" height="70" loading="lazy">
+                <span class="offer-info">
+                  <span class="offer-name">2 jars</span>
+                  <span class="offer-meta">+ free headband · ~4 months</span>
+                </span>
+                <span class="offer-price"><b data-price="2">$39</b><s data-compare="2">$48</s><span class="per" data-per="2">$19.50/jar</span></span>
+              </span>
+            </label>
+            <label class="offer-card">
+              <input type="radio" name="bundle" value="3">
+              <span class="pill-badge pill-chrome">best value</span>
+              <span class="offer-body">
+                <img src="{{ 'pack-3-800.webp' | asset_url }}" alt="" width="56" height="70" loading="lazy">
+                <span class="offer-info">
+                  <span class="offer-name">3 jars</span>
+                  <span class="offer-meta">+ free headband + free shipping</span>
+                </span>
+                <span class="offer-price"><b data-price="3">$52</b><s data-compare="3">$72</s><span class="per" data-per="3">$17.33/jar</span></span>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="ship-bar" data-ship-bar>
+          <p class="ship-msg" data-ship-msg aria-live="polite">you're $11.00 away from free shipping</p>
+          <div class="ship-track" aria-hidden="true"><span data-ship-fill></span></div>
+        </div>
+
+        <button class="btn btn-berry btn-xl jelly" type="submit" data-atc>
+          <span>Add to cart</span><span class="btn-sep" aria-hidden="true">·</span><span data-atc-price>$39</span>
+        </button>
+        <p class="guarantee"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> <span>30-day money-back guarantee. hate it? we'll refund it.</span></p>
+      </form>
+
+      <ul class="badges" aria-label="Product highlights">
+        <li class="chip"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>PDRN dose on the jar</li>
+        <li class="chip"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 18 18 6" stroke="currentColor" stroke-width="2"/></svg>fragrance-free</li>
+        <li class="chip"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><ellipse cx="12" cy="8" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 8v4c0 1.7 3.6 3 8 3s8-1.3 8-3V8M4 12v4c0 1.7 3.6 3 8 3s8-1.3 8-3v-4" fill="none" stroke="currentColor" stroke-width="2"/></svg>70 pads</li>
+        <li class="chip"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 3l6 12M19 3l-6 12M11 15l-1 6M13 15l1 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>chrome tongs included</li>
+      </ul>
+      <div class="test-badges" aria-label="Testing">
+        <span class="test-badge"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>non-comedogenic tested</span>
+        <span class="test-badge"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>dermatologist tested</span>
+      </div>
+      <p class="allergen"><b>Heads up:</b> contains fish-derived DNA (salmon). Do not use if allergic to fish.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: marquee -->
+<section class="marquee" data-section="marquee" aria-label="salmon DNA, glass skin, jelly pads, no breakouts, K-beauty">
+  <div class="marquee-track" aria-hidden="true">
+    <span>SALMON DNA</span><i></i><span>GLASS SKIN</span><i></i><span>JELLY PADS</span><i></i><span>NO BREAKOUTS</span><i></i><span>K-BEAUTY</span><i></i>
+    <span>SALMON DNA</span><i></i><span>GLASS SKIN</span><i></i><span>JELLY PADS</span><i></i><span>NO BREAKOUTS</span><i></i><span>K-BEAUTY</span><i></i>
+    <span>SALMON DNA</span><i></i><span>GLASS SKIN</span><i></i><span>JELLY PADS</span><i></i><span>NO BREAKOUTS</span><i></i><span>K-BEAUTY</span><i></i>
+    <span>SALMON DNA</span><i></i><span>GLASS SKIN</span><i></i><span>JELLY PADS</span><i></i><span>NO BREAKOUTS</span><i></i><span>K-BEAUTY</span><i></i>
+  </div>
+</section>
+
+<!-- SECTION: salmon-dna -->
+<section class="sec sec-cream" id="salmon-dna" data-section="salmon-dna">
+  <div class="wrap split">
+    <div class="split-media reveal">
+      <img src="{{ 'texture-800.webp' | asset_url }}" srcset="{{ 'texture-800.webp' | asset_url }} 800w, {{ 'texture.webp' | asset_url }} 1024w" sizes="(min-width: 960px) 45vw, 100vw" width="1024" height="1024" alt="Salmon jelly pad dripping with essence" loading="lazy">
+      <span class="sticker sticker-float">yes, actual salmon</span>
+    </div>
+    <div class="split-copy reveal">
+      <p class="kicker">pillar 01 · the hook</p>
+      <h2>Wait, salmon DNA?</h2>
+      <ol class="three-lines">
+        <li><b>PDRN</b> is a skincare ingredient made from salmon DNA. Fancy name, simple job: serious hydration.</li>
+        <li>It's the star of the <b>viral Korean salmon DNA facial</b> everyone's been posting. We took the inspo, not the needles.</li>
+        <li>On a pad it means skin that looks <b>dewy, plumper and glassier</b>. That's it. That's the glow.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: ritual -->
+<section class="sec" id="ritual" data-section="ritual">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">the ritual</p>
+      <h2>Swipe. Mask. Glass.</h2>
+      <p class="lede">three steps, five minutes, zero drama.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step-time">am</span>
+        <span class="step-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="40" height="40"><ellipse cx="24" cy="24" rx="14" ry="10" fill="currentColor" opacity=".25"/><path d="M8 34c8-6 24-6 32 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="m34 30 6 4-7 2" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <img class="step-img" src="{{ 'texture-800.webp' | asset_url }}" width="1024" height="1024" alt="Jelly pad lifted with chrome tongs, ready to swipe" loading="lazy">
+        <h3><span class="step-n">1</span> Swipe</h3>
+        <p>Morning: after cleansing, swipe one pad over your whole face. Instant dewy base.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step-time">pm</span>
+        <span class="step-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="3"/><ellipse cx="15" cy="28" rx="5" ry="4" fill="currentColor" opacity=".5"/><ellipse cx="33" cy="28" rx="5" ry="4" fill="currentColor" opacity=".5"/><path d="M18 19h2M28 19h2" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
+        <img class="step-img" src="{{ 'ugc-800.webp' | asset_url }}" width="893" height="1600" alt="Two jelly pads on the cheeks as a 5-minute mask" loading="lazy">
+        <h3><span class="step-n">2</span> Mask</h3>
+        <p>Night: put two pads on your cheeks for 5 minutes. Mini masks. Scroll while you wait.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step-time">after</span>
+        <span class="step-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="40" height="40"><path d="M24 6c6 8 12 14 12 21a12 12 0 0 1-24 0c0-7 6-13 12-21Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M19 29a5 5 0 0 0 5 5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
+        <img class="step-img" src="{{ 'jar-detail-800.webp' | asset_url }}" width="1559" height="1013" alt="The glassé jar label" loading="lazy">
+        <h3><span class="step-n">3</span> Glass</h3>
+        <p>Pat in the leftover essence, then seal it with your moisturizer. Hello, glass.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECTION: dose -->
+<section class="sec sec-dark" id="dose" data-section="dose">
+  <div class="wrap">
+    <div class="dose-card reveal">
+      <div class="dose-copy">
+        <p class="kicker kicker-light">pillar 02 · the trust part</p>
+        <h2>Dose on the jar.</h2>
+        <p class="dose-num"><span class="dose-big">1,000 ppm</span><small>PDRN, printed on every jar</small></p>
+        <p class="dose-text">Most PDRN pads don't tell you how much PDRN is inside. We print it on every jar.</p>
+        <p class="dose-fine">Same number on the label, on this page and on the box. If it changes, we'll tell you.</p>
+      </div>
+      <div class="dose-media">
+        <img src="{{ 'jar-detail-800.webp' | asset_url }}" srcset="{{ 'jar-detail-800.webp' | asset_url }} 800w, {{ 'jar-detail.webp' | asset_url }} 1559w" sizes="(min-width: 960px) 40vw, 90vw" width="1559" height="1013" alt="Close-up of the glassé jar label, where the PDRN dose is printed" loading="lazy">
+        <span class="sticker sticker-chrome">printed, not hidden</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: can-cant -->
+<section class="sec" id="honest" data-section="can-cant">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">real talk</p>
+      <h2>What a pad can <span class="nowrap">(and can't)</span> do</h2>
+    </div>
+    <div class="cc-grid">
+      <div class="cc cc-can reveal">
+        <h3>can</h3>
+        <ul>
+          <li>hydrate, like, a lot</li>
+          <li>make skin look plumper and glassier</li>
+          <li>soothe the look of redness</li>
+          <li>fit a 5-minute routine</li>
+        </ul>
+      </div>
+      <div class="cc cc-cant reveal">
+        <h3>can't</h3>
+        <ul>
+          <li>replace an in-clinic treatment</li>
+          <li>work like an injection</li>
+          <li>change your DNA (relax)</li>
+        </ul>
+      </div>
+    </div>
+    <p class="honest-close reveal">We'd rather be honest than viral. <span>(Ok, both.)</span></p>
+  </div>
+</section>
+
+<!-- SECTION: ingredients -->
+<section class="sec sec-cream" id="ingredients" data-section="ingredients">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">what's inside</p>
+      <h2>Four ingredients doing the heavy lifting</h2>
+      <p class="lede">no fragrance, no alcohol, no dyes. the salmon color is the jar, not the formula.</p>
+    </div>
+    <div class="ing-grid">
+      <article class="ing reveal">
+        <span class="ing-dot" aria-hidden="true"></span>
+        <h3>PDRN <small>salmon DNA · 1,000 ppm</small></h3>
+        <p>Hydrates and helps skin look dewy, plumper and smoother.</p>
+      </article>
+      <article class="ing reveal">
+        <span class="ing-dot" aria-hidden="true"></span>
+        <h3>Niacinamide</h3>
+        <p>Helps even out the look of skin tone and visible pores.</p>
+      </article>
+      <article class="ing reveal">
+        <span class="ing-dot" aria-hidden="true"></span>
+        <h3>Hyaluronic acid</h3>
+        <p>Pulls in moisture for that bouncy, hydrated feel.</p>
+      </article>
+      <article class="ing reveal">
+        <span class="ing-dot" aria-hidden="true"></span>
+        <h3>Centella asiatica</h3>
+        <p>The K-beauty classic that soothes the look of redness.</p>
+      </article>
+    </div>
+    <details class="inci">
+      <summary>Full ingredient list (INCI)</summary>
+      <p>Water, Butylene Glycol, Glycerin, Niacinamide, Sodium DNA (PDRN), Centella Asiatica Extract, Sodium Hyaluronate, Hydrolyzed Hyaluronic Acid, Panthenol, Allantoin, Carrageenan, Ceratonia Siliqua (Carob) Gum, Potassium Chloride, Dipotassium Glycyrrhizate, 1,2-Hexanediol, Ethylhexylglycerin, Disodium EDTA.</p>
+      <p class="inci-free">no fragrance · no alcohol · no dyes</p>
+    </details>
+  </div>
+</section>
+
+<!-- SECTION: comparison -->
+<section class="sec" id="compare" data-section="comparison">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">pillar 03 · breakout-safe</p>
+      <h2>glassé vs typical PDRN pads</h2>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="compare">
+        <thead>
+          <tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col" class="col-us">glassé</th><th scope="col">typical PDRN pads</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">PDRN dose printed</th><td class="col-us"><span class="yes">yes, 1,000 ppm</span></td><td><span class="meh">usually not</span></td></tr>
+          <tr><th scope="row">Fragrance-free</th><td class="col-us"><span class="yes">yes</span></td><td><span class="meh">not always</span></td></tr>
+          <tr><th scope="row">Formulated for breakout-prone skin</th><td class="col-us"><span class="yes">yes</span></td><td><span class="meh">not always</span></td></tr>
+          <tr><th scope="row">Tongs included</th><td class="col-us"><span class="yes">chrome ones</span></td><td><span class="meh">sometimes</span></td></tr>
+          <tr><th scope="row">Pads per jar</th><td class="col-us"><span class="yes">70</span></td><td><span class="meh">varies</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: reviews -->
+<section class="sec sec-cream" id="reviews" data-section="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">the receipts</p>
+      <h2>Real skin, real people</h2>
+      <p class="lede review-summary demo-review"><b>4.8/5</b> from 1,347 reviews</p>
+    </div>
+    <!-- DEMO CONTENT: sample reviews for the internal presentation. Replace with the real review widget before going live. -->
+    <div class="review-grid">
+      <article class="review demo-review">
+        <span class="r-stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 100 20" width="80" height="16" aria-hidden="true"><g fill="#FF8A70" stroke="#3B1220" stroke-width="1.2" stroke-linejoin="round"><use href="#st"/><use href="#st" x="20"/><use href="#st" x="40"/><use href="#st" x="60"/><use href="#st" x="80"/></g></svg></span>
+        <h3>the only PDRN pad that didn't break me out</h3>
+        <p>I've tried two other salmon DNA pads and both gave me tiny bumps on my chin. These? Nothing. Just dewy skin and a very cute jar on my shelf.</p>
+        <footer><b>Maya R.</b><span>oily, acne-prone · 2 jars</span><span class="verified">verified buyer</span></footer>
+      </article>
+      <article class="review demo-review">
+        <span class="r-stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 100 20" width="80" height="16" aria-hidden="true"><g fill="#FF8A70" stroke="#3B1220" stroke-width="1.2" stroke-linejoin="round"><use href="#st"/><use href="#st" x="20"/><use href="#st" x="40"/><use href="#st" x="60"/><use href="#st" x="80"/></g></svg></span>
+        <h3>5-minute glass skin is real</h3>
+        <p>Two pads on my cheeks while I do my eyeliner, pat in the rest, moisturizer, done. My skin looks so much plumper and glassier in the morning.</p>
+        <footer><b>Jordan T.</b><span>combination · 3 jars</span><span class="verified">verified buyer</span></footer>
+      </article>
+      <article class="review demo-review">
+        <span class="r-stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 100 20" width="80" height="16" aria-hidden="true"><g fill="#FF8A70" stroke="#3B1220" stroke-width="1.2" stroke-linejoin="round"><use href="#st"/><use href="#st" x="20"/><use href="#st" x="40"/><use href="#st" x="60"/><use href="#st" x="80"/></g></svg></span>
+        <h3>love that the dose is on the jar</h3>
+        <p>Finally a brand that tells you how much PDRN is actually inside. The pads are soaked, the tongs are chrome and it has zero smell. Already reordered.</p>
+        <footer><b>Aaliyah K.</b><span>dry, sensitive · 2 jars</span><span class="verified">verified buyer</span></footer>
+      </article>
+    </div>
+    <div class="ugc-grid" tabindex="0" aria-label="glassé in real routines, scroll horizontally">
+      <figure class="ugc-card"><img src="{{ 'ugc-creator-1.webp' | asset_url }}" width="714" height="1280" alt="Young woman in her dorm room wearing two glassé jelly pads on her cheeks, holding the jar" loading="lazy"></figure>
+      <figure class="ugc-card"><img src="{{ 'ugc-creator-2.webp' | asset_url }}" width="714" height="1280" alt="Woman with a pink spa headband lifting a jelly pad out of the glassé jar with chrome tongs" loading="lazy"></figure>
+      <figure class="ugc-card"><img src="{{ 'ugc-creator-3.webp' | asset_url }}" width="714" height="1280" alt="Woman laughing in her car with two jelly pads on her cheeks, holding the glassé jar" loading="lazy"></figure>
+      <figure class="ugc-card"><img src="{{ 'ugc-creator-4.webp' | asset_url }}" width="714" height="1280" alt="Woman lying in bed with jelly pads on her cheeks, the glassé jar on the pillow" loading="lazy"></figure>
+      <figure class="ugc-card"><img src="{{ 'ugc-creator-5.webp' | asset_url }}" width="714" height="1280" alt="Woman pressing a jelly pad on her cheek while holding the glassé jar" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: faq -->
+<section class="sec" id="faq" data-section="faq">
+  <div class="wrap wrap-narrow">
+    <div class="sec-head reveal">
+      <p class="kicker">questions</p>
+      <h2>FAQ</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Is it safe for acne-prone skin?</summary>
+        <div class="faq-a"><p>We formulated it for breakout-prone skin: fragrance-free, alcohol-free, no dyes. It’s non-comedogenic tested and dermatologist tested. Every skin is different, so patch test first and introduce it slowly.</p></div>
+      </details>
+      <details>
+        <summary>How much PDRN is inside?</summary>
+        <div class="faq-a"><p>1,000 ppm of PDRN. It's printed on every jar and on this page, because you shouldn't have to guess.</p></div>
+      </details>
+      <details>
+        <summary>Is it vegan?</summary>
+        <div class="faq-a"><p>No. PDRN is salmon-derived, so these pads are not vegan. Fragrance-free and alcohol-free, though. Contains fish-derived DNA: do not use if you're allergic to fish.</p></div>
+      </details>
+      <details>
+        <summary>How long does a jar last?</summary>
+        <div class="faq-a"><p>70 pads ≈ about 2 months with the daily morning swipe plus a few mask nights a week. Use them every night as masks and it'll go faster.</p></div>
+      </details>
+      <details>
+        <summary>Can I use it with retinol or acids?</summary>
+        <div class="faq-a"><p>Usually yes: it's a hydrating step, so use it after cleansing and before your treatments or moisturizer. If your skin feels sensitive, alternate nights and patch test new combos.</p></div>
+      </details>
+      <details>
+        <summary>Shipping &amp; returns</summary>
+        <div class="faq-a"><p>Free US shipping on orders over $35 (the 2- and 3-jar bundles qualify). Orders ship in 5–7 business days. Not into it? You're covered by our 30-day money-back guarantee.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: final-cta -->
+<section class="sec final" id="get-it" data-section="final-cta">
+  <div class="wrap final-grid">
+    <div class="final-media reveal">
+      <img src="{{ 'jar-800.webp' | asset_url }}" srcset="{{ 'jar-800.webp' | asset_url }} 800w, {{ 'jar.webp' | asset_url }} 1289w" sizes="(min-width: 960px) 40vw, 90vw" width="1289" height="1600" alt="glassé Salmon DNA Jelly Pads jar with chrome lid and tongs" loading="lazy">
+      <span class="sticker sticker-a">most popular</span>
+    </div>
+    <div class="final-copy reveal">
+      <h2>Glass skin.<br>No breakouts.</h2>
+      <p class="lede">2 jars for <b>$39</b> ($19.50/jar) + a free headband. Ships free.</p>
+      <button class="btn btn-berry btn-xl jelly" type="button" data-quick-add="2">Get the duo · $39</button>
+      <p class="final-alt"><a href="#buy">or pick 1 or 3 jars</a></p>
+      <p class="guarantee"><span>30-day money-back guarantee</span></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sticky ATC (mobile) -->
+<div class="sticky-atc" data-sticky aria-hidden="true">
+  <div class="sticky-info"><b data-sticky-name>2 jars</b><span data-sticky-price>$39</span></div>
+  <button class="btn btn-berry jelly" type="button" data-sticky-btn tabindex="-1">Add to cart</button>
+</div>
+

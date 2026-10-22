@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FFE9E2">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ 'favicon-32.png' | asset_url }}">
+  <link rel="apple-touch-icon" href="{{ 'apple-touch-icon.png' | asset_url }}">
+  <title>{{ page_title }}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}</title>
+  {%- if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
+  <meta property="og:title" content="{{ page_title | escape }}">
+  <meta property="og:image" content="https:{{ 'jar.webp' | asset_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {%- assign gfonts = 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap' -%}
+  <link rel="preload" as="style" href="{{ gfonts }}">
+  <link rel="stylesheet" href="{{ gfonts }}" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="{{ gfonts }}"></noscript>
+  {{ 'glasse.css' | asset_url | stylesheet_tag }}
+  {%- if template.name == 'index' or product.handle == settings.main_product -%}
+  <link rel="preload" as="image" href="{{ 'jar-800.webp' | asset_url }}" fetchpriority="high">
+  {%- endif -%}
+  {% render 'glasse-config' %}
+  {{ content_for_header }}
+</head>
+<body class="template-{{ template.name }}">
+  <a class="skip" href="#main">Skip to content</a>
+  {% section 'glasse-header' %}
+  <main id="main">
+    {{ content_for_layout }}
+  </main>
+  {% section 'glasse-footer' %}
+  {% render 'glasse-drawer' %}
+  <script src="{{ 'glasse.js' | asset_url }}" defer></script>
+</body>
+</html>

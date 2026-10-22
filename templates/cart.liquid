@@ -1,0 +1,13 @@
+{%- comment -%} The real cart is the drawer: /cart opens the home page with the drawer open. {%- endcomment -%}
+<script>location.replace('{{ routes.root_url }}#cart');</script>
+<div class="wrap dp-page" style="text-align:center">
+  <h1>your cart</h1>
+  {%- if cart.item_count > 0 -%}
+    {%- for item in cart.items -%}<p>{{ item.quantity }} × {{ item.product.title }} {% if item.variant.title != 'Default Title' %}({{ item.variant.title }}){% endif %} · {{ item.final_line_price | money }}</p>{%- endfor -%}
+    <p style="font-weight:700;color:var(--berry)">Subtotal {{ cart.total_price | money }}</p>
+    <a class="dp-btn" href="{{ routes.root_url }}checkout">Checkout</a>
+  {%- else -%}
+    <p>nothing here yet. your skin is waiting.</p>
+    <a class="dp-btn" href="{{ routes.root_url }}">Shop glassé</a>
+  {%- endif -%}
+</div>

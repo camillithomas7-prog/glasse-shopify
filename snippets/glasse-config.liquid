@@ -1,0 +1,28 @@
+{%- comment -%}
+  Passes variant ids and prices to glasse.js (window.GLASSE).
+  Main product: variants 1, 2, 3 = 1 jar / 2 jars / 3 jars (keep this order).
+{%- endcomment -%}
+{%- liquid
+  assign gp = all_products[settings.main_product]
+  assign gd = all_products[settings.dots_product]
+  assign gx = all_products[settings.offer_product]
+  assign imgs = 'jar-800.webp,pack-2-800.webp,pack-3-800.webp' | split: ','
+-%}
+<script>
+window.GLASSE = {
+  offers: {
+    {%- for v in gp.variants limit: 3 -%}
+    "{{ forloop.index }}": { id: {{ v.id }}, price: {{ v.price | divided_by: 100.0 }}, compare: {% if v.compare_at_price > v.price %}{{ v.compare_at_price | divided_by: 100.0 }}{% else %}null{% endif %}, img: "{{ imgs[forloop.index0] | asset_url }}" }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  },
+  {%- if gd != blank and gd.selected_or_first_available_variant %}
+  dots: { id: {{ gd.selected_or_first_available_variant.id }}, price: {{ gd.selected_or_first_available_variant.price | divided_by: 100.0 }}, img: "{{ 'spot-dots-400.webp' | asset_url }}" },
+  {%- endif %}
+  {%- if gx != blank and gx.selected_or_first_available_variant %}
+  pp: { id: {{ gx.selected_or_first_available_variant.id }}, price: {{ gx.selected_or_first_available_variant.price | divided_by: 100.0 }}, img: "{{ 'jar-800.webp' | asset_url }}" },
+  {%- endif %}
+  freeShip: {{ settings.free_ship_threshold | default: 35 }},
+  shipping: {{ settings.shipping_fee | default: 4.95 }},
+  checkoutUrl: "{{ routes.root_url }}checkout"
+};
+</script>
